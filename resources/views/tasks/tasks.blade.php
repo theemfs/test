@@ -12,11 +12,26 @@
 		<div class="panel-body">
 
 			@foreach ($tasks as $task)
-				<task>
-					<h2><a href="tasks/{{ $task->id }}">{{ $task->id }}</a></h2>
-					<pre>{{ $task->task_text }}</pre>
+				<task class="col-xs-10 col-sm-offset-1">
+
+					<h2 class="">
+						<a href="tasks/{{ $task->id }}">
+							<span>{{ $task->id }}</span>
+							<span>{{ $task->name }}</span>
+						</a>
+					</h2>
+
+					<p class='col-xs-12 text-success'>{{ $task->created_at }}</p>
+					<p class='col-xs-12 text-success'>{{ $task->changed_at }}</p>
+					<p class='col-xs-12 text-success'>{{ $task->id }}</p>
+
+					<pre>{{ $task->text }}</pre>
+
 				</task>
+
+
 			@endforeach
+
 		</div>
 	</div>
 

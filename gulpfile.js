@@ -1,5 +1,8 @@
 var elixir = require('laravel-elixir');
 
+elixir.config.publicDir = 'public';
+
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -13,7 +16,11 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     // mix.sass('app.scss');
-    // mix.styles();
-    mix.phpUnit().phpSpec();
-    //mix.less('app.less');
+
+    mix.styles(["bootstrap.css", "custom.css"], 'public/css');
+
+    mix.version('public/css/all.css');
+
+    // mix.phpUnit().phpSpec();
+    // mix.less('app.less');
 });
