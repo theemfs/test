@@ -1,6 +1,7 @@
 var elixir = require('laravel-elixir');
 
-elixir.config.publicDir = 'public';
+require('laravel-elixir-html-minify');
+//elixir.config.publicDir = 'public';
 
 
 /*
@@ -20,6 +21,8 @@ elixir(function(mix) {
     mix.styles(["bootstrap.css", "custom.css"], 'public/css');
 
     mix.version('public/css/all.css');
+
+    //mix.html('**/*.html', 'public/html', 'resources/assets/html', {quotes: true, loose: true, empty: true});
 
     // mix.phpUnit().phpSpec();
     // mix.less('app.less');
