@@ -26,6 +26,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/', 	'PagesController@welcome');
     Route::get('/home', 'PagesController@home');
     Route::get('/about','PagesController@about');
-
     Route::resource('/tasks', 'TasksController');
 });
